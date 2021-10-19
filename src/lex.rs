@@ -119,7 +119,7 @@ lazy_static! {
 }
 
 fn factorial(n: f64) -> f64 {
-    n.signum() * (1..=n.abs() as u64).fold(1, |p, n| p * n) as f64
+    n.signum() * (1..=n.abs() as u64).product() as f64
 }
 
 pub fn lexer(input: &str, prev_ans: Option<f64>) -> Result<Vec<Token>, CalcError> {
